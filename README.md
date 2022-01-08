@@ -24,4 +24,8 @@ The package provides two nodes.
 
 ### Example Usage
 
+#### Using the Image Scaler To Buffer Node
 ![ExampleUsage](https://user-images.githubusercontent.com/12407183/148651415-86906d86-40bc-4c08-90d7-ad34b8145959.png)
+
+#### Using the Image Scaler To File Node
+![ExampleUsage2](https://user-images.githubusercontent.com/12407183/148651539-619c5579-c049-44f7-8725-33e8bd2f9e9f.png)
