@@ -1,0 +1,117 @@
+<script type="text/javascript">
+  RED.nodes.registerType("image-scaler-to-file", {
+    category: "function",
+    color: "#a6bbcf",
+    defaults: {
+      name: { value: "" },
+      inFilename: { value: "inImage.jpg" },
+      outFilename: { value: "outImage.jpg" },
+      height: { value: 1024 },
+      width: { value: 1280 },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "file.png",
+    label: function () {
+      return this.name || "image-scaler-to-file";
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="image-scaler-to-file">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-filename"
+      ><i class="fa fa-file"></i> Input File Name</label
+    >
+    <input
+      type="text"
+      id="node-input-inFilename"
+      placeholder="input_image.jpg"
+    />
+  </div>
+  <div class="form-row">
+    <label for="node-output-filename"
+      ><i class="fa fa-file"></i> Output File Name</label
+    >
+    <input
+      type="text"
+      id="node-input-outFilename"
+      placeholder="output_image.jpg"
+    />
+  </div>
+  <div class="form-row">
+    <label for="node-output-height"
+      ><i class="fa fa-arrows-v"></i> Height</label
+    >
+    <input type="number" id="node-input-height" />
+  </div>
+  <div class="form-row">
+    <label for="node-output-width"><i class="fa fa-arrows-h"></i> Width</label>
+    <input type="number" id="node-input-width" />
+  </div>
+</script>
+
+<script type="text/javascript">
+  RED.nodes.registerType("image-scaler-to-buffer", {
+    category: "function",
+    color: "#a6bbcf",
+    defaults: {
+      name: { value: "" },
+      inFilename: { value: "inImage.jpg" },
+      height: { value: 1024 },
+      width: { value: 1280 },
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "file.png",
+    label: function () {
+      return this.name || "image-scaler-to-buffer";
+    },
+  });
+</script>
+
+<script type="text/html" data-template-name="image-scaler-to-buffer">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name" />
+  </div>
+  <div class="form-row">
+    <label for="node-input-filename"
+      ><i class="fa fa-file"></i> Input File Name</label
+    >
+    <input
+      type="text"
+      id="node-input-inFilename"
+      placeholder="input_image.jpg"
+    />
+  </div>
+
+  <div class="form-row">
+    <label for="node-output-height"
+      ><i class="fa fa-arrows-v"></i> Height</label
+    >
+    <input type="number" id="node-input-height" />
+  </div>
+  <div class="form-row">
+    <label for="node-output-width"><i class="fa fa-arrows-h"></i> Width</label>
+    <input type="number" id="node-input-width" />
+  </div>
+</script>
+
+<script type="text/html" data-help-name="image-scaler-to-file">
+  <p>
+    A node that converts a image from one resolution to another. The ouput is a
+    file
+  </p>
+</script>
+
+<script type="text/html" data-help-name="image-scaler-to-buffer">
+  <p>
+    A node that converts a image from one resolution to another. The ouput is a
+    buffer
+  </p>
+</script>
