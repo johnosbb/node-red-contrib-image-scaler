@@ -30,7 +30,6 @@ module.exports = function (RED) {
         `${this.inFilename} Image Resized to ${this.width} X ${this.height} `,
         config
       );
-      //ConvertImageToFile(this, msg);
       ConvertImageToBuffer(this, msg);
     });
   }
@@ -60,6 +59,8 @@ module.exports = function (RED) {
         node.send(msg);
       });
   }
+
+  
 
   function ConvertImageToBuffer(node, msg) {
     let imageFilePath = msg.payload;
