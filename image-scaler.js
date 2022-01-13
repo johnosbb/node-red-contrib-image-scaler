@@ -34,7 +34,7 @@ module.exports = function (RED) {
       ConvertImageToBuffer(this, msg);
     });
   }
-  ///home/johnos/NodeRed/image-scaler/inImage.jpg
+
 
   RED.nodes.registerType("image-scaler-to-file", ImageScaleFileNode);
 
